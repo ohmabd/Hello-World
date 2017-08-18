@@ -1,0 +1,9 @@
+﻿@{
+var db = Database.Open("SmallBakery");
+var data = db.Query("SELECT Name, Salary FROM Contacts");
+var SalChart = new Chart(width: 500, height: 400, theme: ChartTheme.Blue)
+.AddTitle("Salary Chart")
+.DataBindTable(dataSource: data, xField: "Name")
+.Write();
+}
+

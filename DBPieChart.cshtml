@@ -1,0 +1,11 @@
+﻿@{
+var db = Database.Open("SmallBakery");
+var data = db.Query("SELECT Name, Salary FROM Contacts");
+var SalChart = new Chart(width: 500, height: 400, theme: ChartTheme.Green)
+
+.AddTitle("Salary Chart")
+.AddSeries("Default", chartType: "Pie",
+    xValue: data, xField: "Name",
+    yValues: data, yFields: "Salary")
+.Write();
+}

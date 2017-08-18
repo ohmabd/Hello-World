@@ -1,0 +1,12 @@
+﻿@{
+var myChart = new Chart(width: 300, height: 200, theme: ChartTheme.Vanilla)
+.AddTitle("Bizegypt Salary Chart")
+.AddSeries(
+name: "Employee",
+xValue: new[] { "Osama", "Ahmed", "Hassan", "Ibrahim", "Dave" },
+yValues: new[] { "2000", "6000", "4000", "5000", "3500" })
+.Write();
+}
+
+
+
